@@ -1,9 +1,27 @@
 <?xml version="1.0" ?>
 <data>
   
+  
+
+  
+  <person>
+    
+    
+    <new_entries>{'name': 'Licenceeeee', 'expire_date': '2025-04-25'}</new_entries>
+    
+    
+    <new_entries>{'name': 'Debit card', 'expire_date': '2025-07-20'}</new_entries>
+    
+  
+  </person>
+  
 
   <person>
-    <new_entries>{'name': 'Licenceeeee', 'expire_date': '2025-04-25'}</new_entries>
-    <new_entries>{'name': 'Debit card', 'expire_date': '2025-07-20'}</new_entries>
+    <name>card</name>
+    <expire_date>2025-04-25</expire_date>
+  </person>
+  <person>
+    <name>Debit card</name>
+    <expire_date>2025-07-20</expire_date>
   </person>
 </data>
