@@ -1,8 +1,12 @@
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 import yaml
+import re
 
-def append(yaml_file,xml_file):
+def format_xml(xml_str):
+    return re.sub(r'\n\s*\n+', "\n", xml_str.strip())
+
+def append(yaml_file, xml_file):
     try:
         with open(yaml_file,"r") as yaml_f:
             yaml_data=yaml.safe_load(yaml_f)
@@ -26,6 +30,7 @@ def append(yaml_file,xml_file):
                     child=ET.SubElement(new_person,key)
                     child.text = str(value) if value is not None else ""
         xml_str = minidom.parseString(ET.tostring(root)).toprettyxml(indent="  ")
+        xml_str = format_xml(xml_str)
         with open(xml_file,"w") as xml_f:
             xml_f.write(xml_str)
 
