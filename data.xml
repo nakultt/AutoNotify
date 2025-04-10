@@ -24,4 +24,9 @@
     <name>bike</name>
     <expire_date>2025-04-10</expire_date>
   </person>
+  <person>
+    <name>gift card</name>
+    <expire_date>2025-04-10</expire_date>
+    <card_number>**** ****</card_number>
+  </person>
 </data>
