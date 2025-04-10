@@ -22,5 +22,16 @@ jobs:
           pip install pylint
           pip install pyyaml
           pip install python-dotenv
-      - name: Run mmain.py
+      - name: Run email script
+        env:
+          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+          SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
+          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
         run: python mmain.py
+      - name: Push updated xml file back to repo
+        run: |
+          git config --global user.name "${{ secrets.USERNAME }}"
+          git config --global user.email "${{ secrets.MAIL_ID }}"
+          git add *.xml
+          git commit -m "Update xml file [skip ci]" || echo "No xml changes to commit"
+          git push
