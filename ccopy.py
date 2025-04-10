@@ -20,14 +20,11 @@ def append(yaml_file,xml_file):
             for key,value in person_data.items():
                 if isinstance(value,list):
                     for item in value:
-                        child=ET.SubElement(new_person,key)
-                        child.text=str(item)
+                        item_elem=ET.SubElement(new_person,key)
+                        item_elem.text=str(item)
                 else:
                     child=ET.SubElement(new_person,key)
-                    if value is not None:
-                        child.text=str(value)
-                    else:
-                        child.text=""
+                    child.text = str(value) if value is not None else ""
         xml_str = minidom.parseString(ET.tostring(root)).toprettyxml(indent="  ")
         with open(xml_file,"w") as xml_f:
             xml_f.write(xml_str)
