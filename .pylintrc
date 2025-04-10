@@ -421,7 +421,7 @@ disable=raw-checker-failed,
         suppressed-message,
         useless-suppression,
         deprecated-pragma,
-        use-symbolic-message-instead
+        use-symbolic-message-instead,
         missing-module-docstring,
         missing-function-docstring,
         broad-exception-caught,
