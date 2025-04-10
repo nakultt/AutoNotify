@@ -1,9 +1,9 @@
-import yaml
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
+import yaml
 
 def append(yaml_file,xml_file):
-    try:     
+    try:
         with open(yaml_file,"r") as yaml_f:
             yaml_data=yaml.safe_load(yaml_f)
         try:
@@ -28,7 +28,6 @@ def append(yaml_file,xml_file):
                         child.text=str(value)
                     else:
                         child.text=""
-        
         xml_str = minidom.parseString(ET.tostring(root)).toprettyxml(indent="  ")
         with open(xml_file,"w") as xml_f:
             xml_f.write(xml_str)

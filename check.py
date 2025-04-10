@@ -28,7 +28,6 @@ def check_expiry(xml_file,days_threshold=30):
         if not near_expiry:
             print("No expiration dates nearby.")
         return near_expiry
-    
     except Exception as e:
         print(f"Error checking expiry: {str(e)}")
         return []
