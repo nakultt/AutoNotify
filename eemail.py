@@ -14,12 +14,10 @@ RECIPIENT_EMAIL = os.getenv("RECIPIENT_EMAIL")
 def send_expiry_alert_email(near_expiry_list):
     if not near_expiry_list:
         print("No email needed: no expiration dates nearby.")
-        return True
-    
+        return True    
     if not SENDER_EMAIL or not SENDER_PASSWORD or not RECIPIENT_EMAIL:
         print("Error: Email settings missing!")
-        return False
-    
+        return False 
     try:
         subject = "Alert: Nearby Expiration Dates"
         msg = MIMEMultipart()
