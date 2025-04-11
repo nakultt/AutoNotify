@@ -1,9 +1,9 @@
-from ccopy import append
-from check import check_expiry
-from eemail import send_expiry_alert_email
+from copy_data import append
+from check_date import check_expiry
+from email_send import send_expiry_alert_email
 
 def main():
-    YAML_FILE = "trans.yaml"
+    YAML_FILE = "input_data.yaml"
     XML_FILE = "data.xml"
     DAYS_THRESHOLD = 30
 
