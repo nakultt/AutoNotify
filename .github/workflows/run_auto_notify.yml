@@ -1,4 +1,4 @@
-name: Run mmain.py on trans.yaml changes
+name: Run auto_notify.py on input_data.yaml changes
 
 on:
   push:
