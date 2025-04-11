@@ -1,4 +1,4 @@
-name: Run mmain.py on weekly schedule
+name: Run auto_notify.py on weekly schedule
 
 on:
   schedule:
