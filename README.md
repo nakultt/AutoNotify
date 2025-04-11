@@ -23,11 +23,11 @@ Provide your data in the `input_data.yaml` file using the following format:
 
 ```yaml
 # Example of input_data.yaml
-documents:
-  - name: "Passport"
-    expiry_date: "2025-12-31"
-  - name: "Driver's License"
-    expiry_date: "2024-06-15"
+
+- name: "Passport"
+  expiry_date: "2025-12-31"
+- name: "Driver's License"
+  expiry_date: "2024-06-15"
 ```
 
 ## Contributing
