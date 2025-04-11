@@ -28,6 +28,7 @@ documents:
     expiry_date: "2025-12-31"
   - name: "Driver's License"
     expiry_date: "2024-06-15"
+```
 
 ## Contributing
 
