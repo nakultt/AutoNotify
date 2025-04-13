@@ -3,7 +3,7 @@ name: Run auto_notify.py on input_data.yaml changes
 on:
   push:
     paths:
-      - trans.yaml
+      - input_data.yaml
 
 jobs:
   run-script:
@@ -27,7 +27,7 @@ jobs:
           SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
           SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
           RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
-        run: python mmain.py
+        run: python auto_notify.py
       - name: Push updated xml file back to repo
         run: |
           git config --global user.name "${{ secrets.USERNAME }}"
