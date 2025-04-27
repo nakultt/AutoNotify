@@ -1,4 +1,4 @@
-from notify_core import notify_expiry
+from core.notify_core import notify_expiry
 
 def main():
     XML_FILE = "data.xml"

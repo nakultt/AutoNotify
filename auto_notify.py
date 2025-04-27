@@ -1,5 +1,5 @@
-from copy_data import append
-from notify_core import notify_expiry
+from core.copy_data import append
+from core.notify_core import notify_expiry
 
 def main():
     YAML_FILE = "input_data.yaml"
