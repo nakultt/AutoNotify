@@ -1,5 +1,5 @@
-from check_date import check_expiry
-from email_send import send_expiry_alert_email
+from .check_date import check_expiry
+from .email_send import send_expiry_alert_email
 
 def notify_expiry(XML_FILE, DAYS_THRESHOLD):
     print("\nChecking expiration dates...")
