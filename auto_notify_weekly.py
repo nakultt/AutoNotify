@@ -1,18 +1,9 @@
-from check_date import check_expiry
-from email_send import send_expiry_alert_email
+from notify_core import notify_expiry
 
 def main():
     XML_FILE = "data.xml"
     DAYS_THRESHOLD = 30
-
-    print("\nChecking expiration dates...")
-    near_expiry_list = check_expiry(XML_FILE, DAYS_THRESHOLD)
-
-    print("\nSending email if needed...")
-    if not send_expiry_alert_email(near_expiry_list):
-        print("Failed to send email (if needed).")
-
-        print("\nProcess completed.")
+    notify_expiry(XML_FILE, DAYS_THRESHOLD)
 
 if __name__ == "__main__":
     main()
